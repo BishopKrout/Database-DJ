@@ -1,8 +1,7 @@
 from flask import Flask, redirect, render_template, url_for
-from flask_sqlalchemy import SQLAlchemy
-from models import db, connect_db, Playlist, Song, PlaylistSong
+from models import db, connect_db, Playlist, Song
 from forms import NewSongForPlaylistForm, SongForm, PlaylistForm
-import click
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///playlist-app'
